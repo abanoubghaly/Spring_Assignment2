@@ -1,0 +1,15 @@
+Abanoub Ghaly
+Dr. Chetan Jaiswal
+CS 484 - Advanced Java
+Assignment 2 write-up
+
+Q a.1) Component scanning: instead of explicitly defining beans in an xml or a java-based configuration file, we can tell Spring to automatically do that for us by enabling component scanning. Spring scans the project for classes with an @Component annotation and instantiates them as beans.
+Bean lifecycle: The lifecycle of a bean starts when the Spring container instantiates the corresponding class into a bean. Dependencies are then injected using other beans that have been created or literal values that are provided. Spring then performs some internal processing on the bean. If a custom init method is provided, it will then be executed, and now the bean is ready to use. When the container is done, it will call the custom destroy method if one is provided, and destroys the bean.
+
+Q a.2) When injecting dependencies by autowiring, if there is more than one bean that satisfies that constraints for a certain dependency, the spring container would not be able to find out on its own which bean to use. Therefore, the @Qualifier(bean id) annotation is used to indicate which bean belongs to a certain dependency.
+
+Running the code: 
+Part A.1: Run part_1.App
+Part A.2: Run part_2.App
+Part B: Run part_b.App
+
